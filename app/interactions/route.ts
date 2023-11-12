@@ -1,14 +1,14 @@
 import { APIInteraction, InteractionType } from "discord-api-types/v10";
 
-import { findCommand } from "@/app/lib/commands";
+import { findCommand } from "@/lib/commands";
 import {
   createInteractionResponse,
   createMessageResponse,
   PONG_RESPONSE,
   UNKNOWN_COMMAND_RESPONSE,
   UNKNOWN_INTERACTION_TYPE_RESPONSE,
-} from "@/app/lib/response";
-import isRequestFromDiscord from "@/app/lib/security";
+} from "@/lib/response";
+import isRequestFromDiscord from "@/lib/security";
 
 export async function POST(request: Request) {
   const body = await request.text();

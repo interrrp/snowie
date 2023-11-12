@@ -2,7 +2,7 @@ import { REST } from "@discordjs/rest";
 import { Routes } from "discord-api-types/v10";
 import "dotenv/config";
 
-import { COMMANDS } from "@/app/lib/commands";
+import { COMMANDS } from "@/lib/commands";
 
 (async () => {
   console.log("Syncing...");
