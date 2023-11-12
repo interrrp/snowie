@@ -10,9 +10,14 @@
     "sync": "tsx scripts/sync.ts"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "lucide-react": "^0.292.0",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-snowfall": "^1.2.1",
+    "tailwindcss-animate": "^1.0.7",
     "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
@@ -21,11 +26,14 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "clsx": "^2.0.0",
     "discord-api-types": "^0.37.63",
     "dotenv": "^16.3.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "postcss": "^8",
+    "shadcn-ui": "^0.4.1",
+    "tailwind-merge": "^2.0.0",
     "tailwindcss": "^3.3.0",
     "tsx": "^4.1.1",
     "typescript": "^5"
