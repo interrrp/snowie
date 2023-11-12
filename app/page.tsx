@@ -1,3 +1,4 @@
+import { Github } from "lucide-react";
 import Link from "next/link";
 
 import { metadata } from "@/app/layout";
@@ -23,6 +24,14 @@ export default function Home() {
           className={buttonVariants({ variant: "outline" })}
         >
           Commands
+        </Link>
+        <Link
+          href="https://github.com/interrrp/snowie"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={buttonVariants({ variant: "outline" })}
+        >
+          <Github className="mr-2 h-4 w-4" /> GitHub
         </Link>
       </div>
 
