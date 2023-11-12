@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, Slash, Snowflake } from "lucide-react";
 import Link from "next/link";
 
 import { metadata } from "@/app/layout";
@@ -17,13 +17,14 @@ export default function Home() {
           href={`https://discord.com/api/oauth2/authorize?client_id=${process.env.DISCORD_APPLICATION_ID}&permissions=0&scope=bot applications.commands`}
           className={buttonVariants()}
         >
+          <Snowflake className="btn-icon" />
           Invite me
         </Link>
         <Link
           href="/commands"
           className={buttonVariants({ variant: "outline" })}
         >
-          Commands
+          <Slash className="btn-icon" /> Commands
         </Link>
         <Link
           href="https://github.com/interrrp/snowie"
@@ -31,7 +32,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className={buttonVariants({ variant: "outline" })}
         >
-          <Github className="mr-2 h-4 w-4" /> GitHub
+          <Github className="btn-icon" /> GitHub
         </Link>
       </div>
 
