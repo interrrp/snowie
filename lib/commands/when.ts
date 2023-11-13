@@ -1,7 +1,7 @@
 import { InteractionResponseType } from "discord-api-types/v10";
 
-import { createCommand } from "@/lib/commands/command";
 import { randomColor } from "@/lib/utils/colors";
+import { createCommand } from "@/lib/utils/command";
 
 export default createCommand({
   name: "when",

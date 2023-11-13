@@ -4,8 +4,8 @@ import {
   InteractionResponseType,
 } from "discord-api-types/v10";
 
-import { createCommand, getOption } from "@/lib/commands/command";
 import { randomColor } from "@/lib/utils/colors";
+import { createCommand, getOption } from "@/lib/utils/command";
 import {
   getOrCreateUser,
   incrementSnowballsThrown,

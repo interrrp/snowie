@@ -1,26 +1,10 @@
 import {
-  APIApplicationCommand,
   APIApplicationCommandOptionChoice,
   APIChatInputApplicationCommandInteraction,
-  APIInteractionResponse,
 } from "discord-api-types/v10";
 
-export default interface Command
-  extends Omit<
-    APIApplicationCommand,
-    | "id"
-    | "type"
-    | "application_id"
-    | "default_member_permissions"
-    | "version"
-    | "description"
-  > {
-  description?: string;
-  example?: string;
-  handle: (
-    interaction: APIChatInputApplicationCommandInteraction
-  ) => Promise<APIInteractionResponse>;
-}
+import Command from "@/lib/commands";
+
 export const createCommand = (command: Command) => command;
 
 export function getOption<T>(
