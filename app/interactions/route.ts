@@ -25,6 +25,7 @@ export async function POST(request: Request) {
   switch (type) {
     case InteractionType.Ping:
       return PONG_RESPONSE;
+
     case InteractionType.ApplicationCommand:
       const command = findCommand(data.name);
       if (command) {
@@ -32,6 +33,7 @@ export async function POST(request: Request) {
       } else {
         return UNKNOWN_COMMAND_RESPONSE;
       }
+
     default:
       return UNKNOWN_INTERACTION_TYPE_RESPONSE;
   }
