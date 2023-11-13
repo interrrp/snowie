@@ -6,6 +6,7 @@ import { createCommand } from "@/lib/utils/command";
 export default createCommand({
   name: "when",
   description: "When is Christmas?",
+
   async handle() {
     const now = new Date();
     const christmas = new Date(now.getFullYear(), 11, 25);

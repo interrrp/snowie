@@ -1,12 +1,12 @@
-import ping from "@/lib/commands/ping";
-import snowball from "@/lib/commands/snowball";
-import when from "@/lib/commands/when";
-
 import {
   APIApplicationCommand,
   APIChatInputApplicationCommandInteraction,
   APIInteractionResponse,
 } from "discord-api-types/v10";
+
+import ping from "@/lib/commands/ping";
+import snowball from "@/lib/commands/snowball";
+import when from "@/lib/commands/when";
 
 export default interface Command
   extends Omit<
@@ -20,6 +20,7 @@ export default interface Command
   > {
   description?: string;
   example?: string;
+
   handle: (
     interaction: APIChatInputApplicationCommandInteraction,
   ) => Promise<APIInteractionResponse>;

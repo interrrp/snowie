@@ -24,6 +24,7 @@ export default createCommand({
       required: true,
     },
   ],
+
   async handle(interaction) {
     const attacker = interaction.member?.user!;
     const targetId = getOption<string>(interaction, "target");

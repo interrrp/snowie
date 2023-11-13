@@ -4,6 +4,7 @@ import Link from "next/link";
 import { metadata } from "@/app/layout";
 import Snowfall from "@/components/snowfall";
 import { buttonVariants } from "@/components/ui/button";
+import generateInviteUrl from "@/lib/utils/invite";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
 
       <div className="flex gap-2">
         <Link
-          href={`https://discord.com/api/oauth2/authorize?client_id=${process.env.DISCORD_APPLICATION_ID}&permissions=0&scope=bot applications.commands`}
+          href={generateInviteUrl(process.env.DISCORD_APPLICATION_ID)}
           className={buttonVariants()}
         >
           <Snowflake className="btn-icon" /> Invite me

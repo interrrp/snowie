@@ -1,3 +1,4 @@
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -9,7 +10,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { COMMANDS } from "@/lib/commands";
-import { ArrowLeft } from "lucide-react";
 
 export default function Commands() {
   return (
@@ -34,6 +34,7 @@ export default function Commands() {
               <TableHead>Example</TableHead>
             </TableRow>
           </TableHeader>
+
           <TableBody>
             {COMMANDS.map((command) => (
               <TableRow key={command.name}>
