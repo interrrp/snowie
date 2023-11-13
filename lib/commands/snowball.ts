@@ -15,6 +15,7 @@ import {
 export default createCommand({
   name: "snowball",
   description: "Throw a snowball at someone",
+  example: "@interrrp",
   options: [
     {
       type: ApplicationCommandOptionType.User,

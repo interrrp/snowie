@@ -16,6 +16,7 @@ export default interface Command
     | "description"
   > {
   description?: string;
+  example?: string;
   handle: (
     interaction: APIChatInputApplicationCommandInteraction
   ) => Promise<APIInteractionResponse>;

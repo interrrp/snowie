@@ -17,6 +17,7 @@ export default function Commands() {
           <TableRow>
             <TableHead>Command</TableHead>
             <TableHead>Description</TableHead>
+            <TableHead>Example</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -24,6 +25,9 @@ export default function Commands() {
             <TableRow key={command.name}>
               <TableCell>{command.name}</TableCell>
               <TableCell>{command.description}</TableCell>
+              <TableCell>
+                <code>{`/${command.name} ${command.example || ""}`}</code>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
