@@ -4,13 +4,13 @@ import {
   InteractionResponseType,
 } from "discord-api-types/v10";
 
-import { randomColor } from "@/lib/colors";
 import { createCommand, getOption } from "@/lib/commands/command";
+import { randomColor } from "@/lib/utils/colors";
 import {
   getOrCreateUser,
   incrementSnowballsThrown,
   incrementTimesHitBySnowball,
-} from "@/lib/db";
+} from "@/lib/utils/db";
 
 export default createCommand({
   name: "snowball",

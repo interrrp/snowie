@@ -7,8 +7,8 @@ import {
   PONG_RESPONSE,
   UNKNOWN_COMMAND_RESPONSE,
   UNKNOWN_INTERACTION_TYPE_RESPONSE,
-} from "@/lib/response";
-import isRequestFromDiscord from "@/lib/security";
+} from "@/lib/utils/response";
+import isRequestFromDiscord from "@/lib/utils/security";
 
 export async function POST(request: Request) {
   const body = await request.text();
