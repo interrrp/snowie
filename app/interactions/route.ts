@@ -1,4 +1,9 @@
-import { APIInteraction, InteractionType } from "discord-api-types/v10";
+import {
+  APIChatInputApplicationCommandInteraction,
+  APIInteraction,
+  InteractionResponseType,
+  InteractionType,
+} from "discord-api-types/v10";
 
 import { findCommand } from "@/lib/commands";
 import {
@@ -28,11 +33,14 @@ export async function POST(request: Request) {
 
     case InteractionType.ApplicationCommand:
       const command = findCommand(data.name);
-      if (command) {
-        return createInteractionResponse(await command.handle(json));
-      } else {
-        return UNKNOWN_COMMAND_RESPONSE;
-      }
+      if (!command) return UNKNOWN_COMMAND_RESPONSE;
+
+      return createInteractionResponse({
+        type: InteractionResponseType.ChannelMessageWithSource,
+        data: await command.handle(
+          data as unknown as APIChatInputApplicationCommandInteraction,
+        ),
+      });
 
     default:
       return UNKNOWN_INTERACTION_TYPE_RESPONSE;

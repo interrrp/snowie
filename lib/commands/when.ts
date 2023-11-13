@@ -1,5 +1,3 @@
-import { InteractionResponseType } from "discord-api-types/v10";
-
 import { randomColor } from "@/lib/utils/colors";
 import { createCommand } from "@/lib/utils/command";
 
@@ -15,32 +13,29 @@ export default createCommand({
     );
 
     return {
-      type: InteractionResponseType.ChannelMessageWithSource,
-      data: {
-        embeds: [
-          {
-            title: "⏳ When can you open your presents?",
-            color: randomColor(),
-            fields: [
-              {
-                name: "Current date",
-                value: now.toDateString(),
-                inline: true,
-              },
-              {
-                name: "Christmas",
-                value: christmas.toDateString(),
-                inline: true,
-              },
-              {
-                name: "Days left",
-                value: `${daysUntilChristmas} days until Christmas`,
-                inline: true,
-              },
-            ],
-          },
-        ],
-      },
+      embeds: [
+        {
+          title: "⏳ When can you open your presents?",
+          color: randomColor(),
+          fields: [
+            {
+              name: "Current date",
+              value: now.toDateString(),
+              inline: true,
+            },
+            {
+              name: "Christmas",
+              value: christmas.toDateString(),
+              inline: true,
+            },
+            {
+              name: "Days left",
+              value: `${daysUntilChristmas} days until Christmas`,
+              inline: true,
+            },
+          ],
+        },
+      ],
     };
   },
 });

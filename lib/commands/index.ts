@@ -1,7 +1,7 @@
 import {
   APIApplicationCommand,
   APIChatInputApplicationCommandInteraction,
-  APIInteractionResponse,
+  APIInteractionResponseCallbackData,
 } from "discord-api-types/v10";
 
 import ping from "@/lib/commands/ping";
@@ -23,7 +23,7 @@ export default interface Command
 
   handle: (
     interaction: APIChatInputApplicationCommandInteraction,
-  ) => Promise<APIInteractionResponse>;
+  ) => Promise<APIInteractionResponseCallbackData>;
 }
 
 export const COMMANDS: Command[] = [ping, when, snowball];
