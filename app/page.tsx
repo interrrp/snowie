@@ -35,7 +35,6 @@ export default function Home() {
           <Github className="btn-icon" /> GitHub
         </Link>
       </div>
-
       <Snowfall />
     </main>
   );

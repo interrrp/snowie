@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     case InteractionType.ApplicationCommand:
       const command = findCommand(data.name);
       if (command) {
-        return createInteractionResponse(await command.handle(data));
+        return createInteractionResponse(await command.handle(json));
       } else {
         return UNKNOWN_COMMAND_RESPONSE;
       }

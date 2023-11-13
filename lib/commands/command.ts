@@ -1,6 +1,7 @@
 import {
   APIApplicationCommand,
-  APIApplicationCommandInteractionData,
+  APIApplicationCommandOptionChoice,
+  APIChatInputApplicationCommandInteraction,
   APIInteractionResponse,
 } from "discord-api-types/v10";
 
@@ -16,7 +17,17 @@ export default interface Command
   > {
   description?: string;
   handle: (
-    interaction: APIApplicationCommandInteractionData
+    interaction: APIChatInputApplicationCommandInteraction
   ) => Promise<APIInteractionResponse>;
 }
 export const createCommand = (command: Command) => command;
+
+export function getOption<T>(
+  interaction: APIChatInputApplicationCommandInteraction,
+  name: string
+): T {
+  return (
+    interaction.data
+      .options as unknown as APIApplicationCommandOptionChoice<T>[]
+  ).find((option) => option.name === name)?.value as T;
+}
