@@ -8,6 +8,6 @@ export default function isRequestFromDiscord(request: Request, body: string) {
   return nacl.sign.detached.verify(
     Buffer.from(timestamp + body),
     Buffer.from(signature, "hex"),
-    Buffer.from(process.env.DISCORD_PUBLIC_KEY, "hex")
+    Buffer.from(process.env.DISCORD_PUBLIC_KEY, "hex"),
   );
 }

@@ -10,7 +10,7 @@ export default createCommand({
     const now = new Date();
     const christmas = new Date(now.getFullYear(), 11, 25);
     const daysUntilChristmas = Math.floor(
-      (christmas.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
+      (christmas.getTime() - now.getTime()) / (1000 * 60 * 60 * 24),
     );
 
     return {

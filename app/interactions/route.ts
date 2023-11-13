@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   if (!isRequestFromDiscord(request, body)) {
     return createMessageResponse(
       "Only Discord is permitted to interact with this endpoint",
-      401
+      401,
     );
   }
 

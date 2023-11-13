@@ -9,7 +9,7 @@ export const createCommand = (command: Command) => command;
 
 export function getOption<T>(
   interaction: APIChatInputApplicationCommandInteraction,
-  name: string
+  name: string,
 ): T {
   return (
     interaction.data

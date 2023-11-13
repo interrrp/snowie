@@ -12,7 +12,7 @@ export function createObjectResponse<T>(obj: T, statusCode: number = 200) {
 
 export function createMessageResponse(
   message: string,
-  statusCode: number = 200
+  statusCode: number = 200,
 ) {
   return createObjectResponse({ message }, statusCode);
 }
@@ -29,5 +29,5 @@ export const UNKNOWN_COMMAND_RESPONSE = createInteractionResponse({
 });
 export const UNKNOWN_INTERACTION_TYPE_RESPONSE = createMessageResponse(
   "Unknown interaction type",
-  400
+  400,
 );
