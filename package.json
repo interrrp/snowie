@@ -9,7 +9,8 @@
     "lint": "next lint",
     "sync": "tsx scripts/sync.ts",
     "db:push": "prisma db push",
-    "db:generate": "prisma generate"
+    "db:generate": "prisma generate",
+    "postinstall": "pnpm run db:generate"
   },
   "dependencies": {
     "@prisma/client": "5.5.2",
