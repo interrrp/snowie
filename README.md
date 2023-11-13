@@ -60,6 +60,10 @@ hosting platform that supports Next.js.
 DISCORD_APPLICATION_ID=<your Discord bot's application ID>
 DISCORD_TOKEN=<your Discord bot's token>
 DISCORD_PUBLIC_KEY=<your Discord bot's public key>
+
+# These values are given in the database tab of your Vercel project (.env)
+POSTGRES_PRISMA_URL=<your Vercel project's database URL>
+POSTGRES_URL_NON_PRISMA=<your Vercel project's database URL>
 ```
 
 ...and fill out the values accordingly.
