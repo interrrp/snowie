@@ -44,10 +44,31 @@ hosting platform that supports Next.js.
 ## On Vercel
 
 1. 🍴 Fork this repository
+
 2. 🔼 Create a new Vercel project
+
 3. 🔗 Link your forked repository to the project
+
 4. 🗄️ Create a database on your Vercel project (Storage tab)
-5. Deploy!
+
+5. 🤖 Create a Discord bot on the [Discord Developer
+   Portal](https://discord.com/developers/applications)
+
+6. 📝 Create a `.env` file with the following contents:
+
+```env
+DISCORD_APPLICATION_ID=<your Discord bot's application ID>
+DISCORD_TOKEN=<your Discord bot's token>
+DISCORD_PUBLIC_KEY=<your Discord bot's public key>
+```
+
+...and fill out the values accordingly.
+
+7. 🔗 Set the interactions URL to `https://<your Vercel project's URL>/interactions` on the Discord Developer Portal
+
+8. 🍾 Invite your bot (see URL generator tab) to your server
+
+9. 🎉 You're done!
 
 ## On other platforms
 
